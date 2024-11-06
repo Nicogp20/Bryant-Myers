@@ -1,0 +1,288 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+
+/* Banner fijo */
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 275px; 
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #00ff77;
+}
+
+/* Contenido principal */
+.separacion {
+    padding-top: 270px;
+    padding-bottom: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section {
+    padding: 40px;
+    background-color: #121212;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Biografía */
+.bio p {
+    font-size: 1.1em;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #006e34;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #cccccc;
+    font-size: 1em;
+}
+
+/* Galería de imágenes*/
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Videos */
+.video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Enlaces a discos */
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.album img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.album a:hover img {
+    transform: scale(1.1);
+}
+
+/* Pie de página RRSS*/
+footer {
+    background-color: #0a0a0a;
+    color: #cccccc;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+footer .social-icons a img:hover {
+    transform: scale(1.2);
+}
+/* Columna izquierda */
+.column-left {
+    width: 200px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a3d2744, #1a1a1a);
+    color: #ffffff;
+    float: left;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding-top: 275px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.canciones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.canciones li {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.canciones li:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.canciones li::before {
+    content: '♪'; /* Icono musical */
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.canciones li a {
+    color: #ffffff;
+    text-decoration: none;
+    flex-grow: 1;
+    transition: color 0.3s;
+}
+
+.canciones li a:hover {
+    color: #ffffff;
+}
+
+/* Columna derecha */
+.column-right {
+    width: 220px;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    color: #ffffff;
+    float: right;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding-top: 275px;
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+.column-right a {
+    display: block;
+    color: #1db954;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.column-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+}
+
+.column-right img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Carrusel usando scroll-snap */
+.carousel {
+    width: 100%;
+    max-width: 600px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.imagenes-carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-snap-align: start;
+}
+
+.imagen-carrusel {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain; /* Evitamos que las imágenes se corten */
+    scroll-snap-align: center;
+    flex-shrink: 0;
+}
+
+/* Añadimos atributos para suavizar el desplazamiento */
+.carousel {
+    scroll-behavior: smooth;
+}
+
+.imagenizq {
+    float: left;
+    width: 400px;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+/*Estilos responsivo*/
+
+@media (max-width: 768px) {
+    .contenido-principal {
+        flex-direction: column;
+    }
+
+    .column-left, .column-right {
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .separacion {
+        margin: 20px 0;
+    }
+}
